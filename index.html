@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Praveenkumar Majji | Python Full Stack Developer</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    background:#0f172a;
+    color:#fff;
+}
+
+/* Navbar */
+
+header{
+    position:fixed;
+    width:100%;
+    top:0;
+    z-index:1000;
+    background:#111827;
+    box-shadow:0 0 10px rgba(0,0,0,.3);
+}
+
+nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:18px 8%;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:bold;
+    color:#38bdf8;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+}
+
+nav ul li{
+    margin-left:25px;
+}
+
+nav ul li a{
+    color:white;
+    text-decoration:none;
+    transition:.3s;
+}
+
+nav ul li a:hover{
+    color:#38bdf8;
+}
+
+/* Hero */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:0 20px;
+}
+
+.hero h1{
+    font-size:60px;
+}
+
+.hero h1 span{
+    color:#38bdf8;
+}
+
+.hero h2{
+    margin-top:15px;
+    color:#06b6d4;
+    min-height:50px;
+}
+
+.hero p{
+    max-width:800px;
+    margin:20px auto;
+    line-height:1.8;
+    color:#cbd5e1;
+}
+
+.btn{
+    display:inline-block;
+    padding:12px 30px;
+    background:#38bdf8;
+    color:#000;
+    text-decoration:none;
+    border-radius:30px;
+    margin:10px;
+    font-weight:bold;
+    transition:.4s;
+}
+
+.btn:hover{
+    transform:translateY(-5px);
+}
+
+.btn2{
+    display:inline-block;
+    padding:12px 30px;
+    border:2px solid #38bdf8;
+    color:white;
+    text-decoration:none;
+    border-radius:30px;
+    margin:10px;
+}
+
+/* Sections */
+
+section{
+    padding:100px 10%;
+}
+
+.section-title{
+    text-align:center;
+    font-size:40px;
+    margin-bottom:50px;
+    color:#38bdf8;
+}
+
+/* About */
+
+.about{
+    background:#111827;
+}
+
+.about-card{
+    background:#1e293b;
+    padding:35px;
+    border-radius:20px;
+    text-align:center;
+    line-height:1.8;
+}
+
+/* Skills */
+
+.skills-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.skill-card{
+    background:#1e293b;
+    padding:25px;
+    border-radius:15px;
+    text-align:center;
+    transition:.4s;
+}
+
+.skill-card:hover{
+    transform:translateY(-10px);
+}
+
+.progress{
+    height:10px;
+    background:#334155;
+    border-radius:20px;
+    margin-top:15px;
+}
+
+.progress span{
+    display:block;
+    height:100%;
+    background:#38bdf8;
+    border-radius:20px;
+}
+
+/* Projects */
+
+.projects{
+    background:#111827;
+}
+
+.project-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:25px;
+}
+
+.project-card{
+    background:#1e293b;
+    padding:25px;
+    border-radius:15px;
+    transition:.4s;
+}
+
+.project-card:hover{
+    transform:translateY(-10px);
+}
+
+.project-card h3{
+    color:#38bdf8;
+    margin-bottom:10px;
+}
+
+/* Internship */
+
+.timeline-item{
+    background:#1e293b;
+    margin:20px 0;
+    padding:25px;
+    border-left:5px solid #38bdf8;
+    border-radius:10px;
+}
+
+/* Certifications */
+
+.cert-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.cert-card{
+    background:#1e293b;
+    padding:25px;
+    text-align:center;
+    border-radius:15px;
+}
+
+/* Education */
+
+.education{
+    background:#111827;
+}
+
+.edu-card{
+    background:#1e293b;
+    padding:25px;
+    margin-bottom:20px;
+    border-radius:15px;
+}
+
+/* Contact */
+
+.contact form{
+    max-width:700px;
+    margin:auto;
+}
+
+.contact input,
+.contact textarea{
+    width:100%;
+    padding:15px;
+    margin:10px 0;
+    border:none;
+    border-radius:10px;
+}
+
+.contact button{
+    width:100%;
+    padding:15px;
+    background:#38bdf8;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    font-size:18px;
+}
+
+.social{
+    text-align:center;
+    margin-top:30px;
+}
+
+.social a{
+    color:white;
+    font-size:30px;
+    margin:0 15px;
+    transition:.4s;
+}
+
+.social a:hover{
+    color:#38bdf8;
+}
+
+/* Footer */
+
+footer{
+    text-align:center;
+    padding:25px;
+    background:#020617;
+}
+
+/* Animation */
+
+.hidden{
+    opacity:0;
+    transform:translateY(50px);
+    transition:all 1s;
+}
+
+.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+@media(max-width:768px){
+
+.hero h1{
+    font-size:40px;
+}
+
+nav{
+    flex-direction:column;
+}
+
+nav ul{
+    margin-top:10px;
+}
+
+}
+
+</style>
+</head>
+<body>
+
+<header>
+<nav>
+<div class="logo">Praveenkumar</div>
+
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+</header>
+
+<section class="hero" id="home">
+
+<div>
+
+<h1>Hello, I'm <span>Praveenkumar Majji</span></h1>
+
+<h2 id="typing"></h2>
+
+<p>
+Aspiring Python Full Stack Developer with knowledge in Python,Numpy, Pandas,
+HTML, CSS, JavaScript, Django, REST API, Machine Learning,
+MySQL and Web Development.
+</p>
+
+<a href="#contact" class="btn">Contact me</a>
+
+<a href="Majji_Resume_.pdf" class="btn2" download>
+    <i class="fas fa-download"></i>View Resume
+</a>
+
+</div>
+
+</section>
+
+<section class="about hidden" id="about">
+
+<h2 class="section-title">About Me</h2>
+
+<div class="about-card">
+
+<p>
+I am a Computer Science and Engineering graduate passionate
+about Python Developer, Full Stack Development, Machine
+Learning and emerging technologies. I enjoy building responsive
+web applications and solving real-world problems through coding.
+</p>
+
+</div>
+
+</section>
+
+<section id="skills">
+
+<h2 class="section-title hidden">Technical Skills</h2>
+
+<div class="skills-grid">
+
+<div class="skill-card hidden">
+<h3>Python</h3>
+<div class="progress"><span style="width:90%"></span></div>
+</div>
+<div class="skill-card hidden">
+<h3>Numpy</h3>
+<div class="progress"><span style="width:80%"></span></div>
+</div>
+<div class="skill-card hidden">
+<h3>Pandas</h3>
+<div class="progress"><span style="width:80%"></span></div>
+</div>
+
+<div class="skill-card hidden">
+<h3>HTML</h3>
+<div class="progress"><span style="width:95%"></span></div>
+</div>
+
+<div class="skill-card hidden">
+<h3>CSS</h3>
+<div class="progress"><span style="width:90%"></span></div>
+</div>
+
+<div class="skill-card hidden">
+<h3>JavaScript</h3>
+<div class="progress"><span style="width:80%"></span></div>
+</div>
+<div class="skill-card hidden">
+<h3>Bootstrap</h3>
+<div class="progress"><span style="width:80%"></span></div>
+</div>
+
+<div class="skill-card hidden">
+<h3>Django</h3>
+<div class="progress"><span style="width:80%"></span></div>
+</div>
+
+<div class="skill-card hidden">
+<h3>MySQL</h3>
+<div class="progress"><span style="width:85%"></span></div>
+</div>
+
+</div>
+
+</section>
+
+<section class="projects" id="projects">
+
+<h2 class="section-title hidden">Projects</h2>
+
+<div class="project-grid">
+
+<div class="project-card hidden">
+<h3>Diabetes Prediction Using Machine Learning</h3>
+<p>
+Developed a machine learning model using Python to predict
+diabetes risk from patient health data.
+</p>
+</div>
+
+<div class="project-card hidden">
+<h3>Protecting EV Charging Stations From Cyberattacks</h3>
+<p>
+Analyzed cybersecurity threats affecting Electric Vehicle
+charging station infrastructure and security.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<h2 class="section-title hidden">Internships</h2>
+
+<div class="timeline-item hidden">
+<h3>Python Full Stack Development Intern</h3>
+<p>
+HTML, CSS, JavaScript, Django, Database Integration,
+Responsive Web Development.
+</p>
+</div>
+
+<div class="timeline-item hidden">
+<h3>AI & Machine Learning Intern</h3>
+<p>
+Machine Learning, Data Analysis, Predictive Models,
+Python Development.
+</p>
+</div>
+
+</section>
+
+<section>
+
+<h2 class="section-title hidden">Certifications</h2>
+
+<div class="cert-grid">
+
+<div class="cert-card hidden">
+DevOps Fundamentals
+</div>
+
+<div class="cert-card hidden">
+AWS Build, Code & Test
+</div>
+
+<div class="cert-card hidden">
+Python Basics & Machine Learning
+</div>
+
+</div>
+
+</section>
+
+<section class="education">
+
+<h2 class="section-title hidden">Education</h2>
+
+<div class="edu-card hidden">
+B.Tech - Computer Science and Engineering
+</div>
+
+<div class="edu-card hidden">
+Intermediate (MPC)
+</div>
+
+<div class="edu-card hidden">
+SSC
+</div>
+
+</section>
+
+<section class="contact" id="contact">
+
+<h2 class="section-title hidden">Contact Me</h2>
+
+<form class="hidden">
+
+<input type="text" placeholder="Your Name">
+
+<input type="email" placeholder="Your Email">
+
+<textarea rows="5" placeholder="Your Message"></textarea>
+
+<button>Send Message</button>
+
+</form>
+
+<div class="social hidden">
+
+<a href="#"><i class="fab fa-linkedin"></i></a>
+
+<a href="#"><i class="fab fa-github"></i></a>
+
+<a href="#"><i class="fas fa-envelope"></i></a>
+
+</div>
+
+</section>
+
+<footer>
+© 2026 Praveenkumar Majji | Python Full Stack Developer
+</footer>
+
+<script>
+
+/* Typing Animation */
+
+const texts=[
+"Python Developer",
+"Full Stack Developer",
+];
+
+let count=0;
+let index=0;
+let currentText='';
+let letter='';
+
+(function type(){
+
+if(count===texts.length){
+count=0;
+}
+
+currentText=texts[count];
+letter=currentText.slice(0,++index);
+
+document.getElementById('typing').textContent=letter;
+
+if(letter.length===currentText.length){
+
+count++;
+index=0;
+
+setTimeout(type,1500);
+
+}else{
+
+setTimeout(type,100);
+
+}
+
+})();
+
+/* Scroll Animation */
+
+const observer=new IntersectionObserver((entries)=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+entry.target.classList.add("show");
+}
+
+});
+
+});
+
+document.querySelectorAll(".hidden").forEach((el)=>{
+observer.observe(el);
+});
+
+</script>
+
+</body>
+</html>
